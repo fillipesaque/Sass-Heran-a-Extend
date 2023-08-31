@@ -1,0 +1,42 @@
+
+.container-btn{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkgray;
+}
+        /* Herança e Extend  */
+        /* Herança so funciona se o elemento estiver com a msm classe igual , e usando o & .subclasse aplica estilo individual */
+        /* Extend puxa o style de uma classe para um outro elemento de classe diferente */
+.btn{
+    width: 120px;
+    height: 50px;
+    padding: 10px 0px;
+    border-radius: 20px;    /* Aplicando estilo para todos elemento q estao com a classe BTn */
+    display: block;
+    margin-top: 10px;
+
+    &.btn-purple{
+        background-color: purple;   /* &. aplica estilo individual alem dos que ja estao sendo aplicado do .btn */  
+        color: white;
+    }
+    &.btn-yellow{
+        background-color: yellow;
+    }
+}
+
+.btn-blue{
+    background-color: blue;  /* aplicando estilo de um elemento em outro usando o @extend */
+    color: black;
+    @extend .btn                
+
+}
+
+.btn-green{
+    @extend .btn;
+    background-color: greenyellow;
+
+}

@@ -1,0 +1,1 @@
+canceitos de herança e extend dentro do sass
